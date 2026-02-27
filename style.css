@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    /* border: 4px solid red; */
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.portofolio-container{
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    width: 380px;
+    flex-direction: column;
+}
+
+ .portofolio-header{
+    /* border: 4px solid blue; */
+    width: 100%;
+    height: 80px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.portofolio-homepage{
+    border: 4px solid green;
+    background-image: url(./images/header.png);
+    background-size: cover;
+    width: 375px;
+    height: 653px;
+    flex-direction: column;
+    
+}
+
+.portofolio-title{
+    /* border: 4px solid red; */
+    width: 327px;
+    height: 211px;
+    margin-top: 80px;
+    margin-left: 27px;
+    opacity: 1;
+ 
+}
+
+.title{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 52px;
+    letter-spacing: 0%;
+       color:#36B3
+    text-align: center;
+    
+}
+.portofolio-description{
+    /* border: 4px solid blue; */
+    width: 327;
+    height: 167px;
+    margin-top: 20px;
+    margin-left:27px;
+    margin-right:27px;
+    opacity: 1;
+    text-align: center;
+}
+
+.description{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0%;
+      color:#172B4D;
+    text-align: center;
+}
+
+.social-media{
+/* border: 4px solid brown; */
+width: 170px;
+height: 19px;
+ margin-top: 15px;
+ margin-left: 70px;
+ margin-right: 50px;
+ opacity: 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+.icon{
+    width: 30px;
+    height:20px;
+    margin-left: 5px;
+}
+
+
+.action{
+    /* border: 4px solid green; */
+    width: 327;
+   height: 48;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+  
+     display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+} 
+
+.cheveron-action{
+    /* border: 4px solid green; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+      opacity: 1;
+}
+
+.flip {
+  transform: scaleY(-1);
+}
+

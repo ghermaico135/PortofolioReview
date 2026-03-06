@@ -1,5 +1,6 @@
- /* Global Reset */
-/* ========================= */ */
+/* =========================
+   Global reset
+   ========================= */
 
 *,
 *::before,
@@ -9,27 +10,28 @@
   padding: 0;
 }
 
-body{
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: "Inter", sans-serif;
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
 }
 
 /* =========================
-   Layout Wrapper
-========================= */
+   Layout wrapper
+   ========================= */
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 120vh;
-  
 }
 
 /* =========================
-   Portfolio Container
-========================= */
+   Portfolio container
+   ========================= */
+
 .portfolio-container {
   width: 380px;
   margin: 10px;
@@ -41,8 +43,9 @@ body{
 }
 
 /* =========================
-   Header
-========================= */
+   Site header (logo + menu)
+   ========================= */
+
 .portfolio-header {
   height: 80px;
   display: flex;
@@ -50,10 +53,19 @@ body{
   align-items: center;
 }
 
+.portfolio-header__logo {
+  display: block;
+}
+
+.portfolio-header__hamburger-menu {
+  display: block;
+}
+
 /* =========================
-   Homepage Section
-========================= */
-.portfolio-homepage {
+   Hero section
+   ========================= */
+
+.hero {
   background-image: url("./images/header.png");
   background-size: cover;
   background-position: center;
@@ -65,43 +77,34 @@ body{
   padding: 0 10px;
 }
 
-/* =========================
-   Title Section
-========================= */
-.portfolio-title {
+.hero__title-wrap {
   width: 100%;
   max-width: 327px;
   margin-top: 50px;
   text-align: center;
 }
 
-.title {
+.hero__title {
   font-weight: 700;
   font-size: 50px;
   line-height: 1;
-  color: #36B37E;
+  color: #36b37e;
 }
 
-/* =========================
-   Description
-========================= */
-.portfolio-description {
+.hero__description-wrap {
   max-width: 327px;
   margin: auto 0;
   text-align: center;
 }
 
-.description {
+.hero__description {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
-  color: #172B4D;
+  color: #172b4d;
 }
 
-/* =========================
-   Social Media
-========================= */
-.social-media {
+.hero__social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,35 +112,33 @@ body{
   margin-top: 15px;
 }
 
-.icon {
+.hero__social-icon {
   width: 30px;
   height: 20px;
 }
 
-/* =========================
-   Action Button
-========================= */
-.action {
+.hero__scroll {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
 
-.chevron-action {
+.hero__scroll-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.flip {
+.hero__scroll-icon.flip {
   transform: scaleY(-1);
 }
 
-/* 
-Recent section
-*/
-.recent-section {
+/* =========================
+   Works section (recent works + project cards)
+   ========================= */
+
+.works {
   margin: 10px;
   border-radius: 10px;
   display: flex;
@@ -145,187 +146,187 @@ Recent section
   text-align: center;
   justify-content: center;
   overflow: hidden;
-  padding:0 10px ;
+  padding: 0 10px;
 }
 
-.recent-header {
+.works__header {
   width: 100%;
   max-width: 327px;
   margin-top: 10px;
   text-align: center;
 }
-.recent-title{
- font-weight: 500;
+
+.works__title {
+  font-weight: 500;
   font-size: 50px;
   line-height: 1;
   color: #000;
 }
 
-/* 
-Recent page
-*/
-.recent-page{
+.works__list {
   width: 98%;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-   border-radius: 5px;
+  border-radius: 5px;
 }
 
-.recent-area1{
-    height: 35vh;
-    width: 100%;
-    background-color: #f2ecec;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    
-}
-.recent-area2{
-    height: 45vh;
-    width: 100%;
-    background-color: #fff;
-    border: 4px solid #ccc;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* =========================
+   Project card (shared by recent + grid)
+   ========================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.title3 {
+.project-card__image {
+  height: 35vh;
+  width: 100%;
+  background-color: #f2ecec;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.project-card__content {
+  height: 45vh;
+  width: 100%;
+  background-color: #fff;
+  border: 4px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
-  color: #36B37E;
-  align-items: center;
+  color: #36b37e;
 }
 
-.list-lang{
-   width: 300px;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
- 
-}
-
-.list-lang > li{
-  width: 60px;
-    background-color: #ccc;
-    padding: 10px;
-    font-weight: 300;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-right: 5px;
-
-
-}
-
-.submit-btn{
-    background-color: #36B37E;
-    outline: none;
-    cursor: pointer;
-    display: block;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-    padding: 15px;
-    text-align: center;
-    border:none;
-    border-radius: 10px;
-    width: 150px;
-    margin-bottom: 8px;
-}
-
-/* project-section */
-.project-section{
-  margin: 10px;
-  border-radius: 10px;
+.project-card__tags {
+  width: 300px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.project-card__tags > li {
+  width: 60px;
+  background-color: #ccc;
+  padding: 10px;
+  font-weight: 300;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* Works grid: multiple project cards */
+.works--grid {
+  height: auto;
+}
+
+.works--grid .project-card {
+  margin-bottom: 10px;
+}
+
+.works--grid .project-card__image {
+  height: 35vh;
+}
+
+.works--grid .project-card__content {
+  height: 45vh;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 15px;
   text-align: center;
-  justify-content: center;
-  overflow: hidden;
-  padding:0 10px ;
-  height: 80vh;
-
+  border: none;
+  border-radius: 10px;
+  width: 150px;
+  margin-bottom: 8px;
 }
 
-.recent-area{
-   height: 35vh;
-    width: 100%;
-    background-color: #f2ecec;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-
+.btn--primary {
+  background-color: #36b37e;
+  color: #fff;
 }
 
-.recent-area3{
-    height: 45vh;
-    width: 100%;
-    background-color: #fff;
-    border: 4px solid #ccc;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* =========================
+   About section
+   ========================= */
 
-/* About me */
-.about-section{
+.about {
   height: 1522px;
   width: 365px;
   margin: 0 auto;
 }
-.about-me{
-   height: 380px;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./images/Mask\ Group.png);
-    background-size:68px 127px;
-    background-repeat: no-repeat;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-  
+
+.about__intro {
+  height: 380px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Mask\ Group.png);
+  background-size: 68px 127px;
+  background-repeat: no-repeat;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
-.about-me > h3{
-  font-family: Inter;
+.about__title {
+  font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1.1;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   vertical-align: middle;
-
-}
-.about-description{
-   height: 351px;
-    width: 250px;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.1;
-    letter-spacing: 0%;
-    text-align: center;
-
 }
 
-/* languages */
-.about-languages{
+.about__description {
+  height: 351px;
+  width: 250px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.about__skills {
   width: 327px;
-  height: 1050px;
-     border-radius: 10px;
-  padding:0 10px ;
+  min-height: 1050px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 0 10px;
   border: 4px solid black;
 }
 
+/* =========================
+   Skill category (languages / frameworks / skills)
+   ========================= */
 
-.lang-area{
+.skill-category {
   width: 310px;
   display: flex;
   flex-direction: column;
@@ -335,36 +336,37 @@ Recent page
   margin-top: 10px;
 }
 
-.lang-frame{
+.skill-category__icon {
   width: 100px;
   height: 100px;
   background-color: green;
   border-radius: 50%;
-
 }
 
-.lang-frame > h1{
-  color: #fff;
+.skill-category__title {
+  color: #172b4d;
   font-size: 15px;
   text-align: center;
-
-}
-.frame-work{
-   width: 90%;
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    flex-wrap: wrap;
-    gap: 5px;
-
+  margin:10px 0px;
 }
 
-.frame-work > li{
-   width: 55px; 
-    background-color: #fff;
-    padding: 5px;
-    font-weight: 300;
-    border-radius: 5px;
-    font-size: 12px;
-    text-align: center;
+.skill-category__list {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.skill-category__list > li {
+  width: 55px;
+  background-color: #fff;
+  padding: 5px;
+  font-weight: 300;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 5px;
 }

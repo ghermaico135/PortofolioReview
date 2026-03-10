@@ -22,13 +22,12 @@ body {
 
 .wrapper {
     width: 375px;
-    height: 690px;
+    min-height: 690px;
     opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    overflow: hidden;
+    overflow: auto;
     background-color: #ccc;
 }
 
@@ -38,7 +37,7 @@ body {
 
 .project {
     width: 343px;
-    height: 670px;
+    min-height: 670px;
     top: 20px;
     left: 16px;
     border-radius: 16px;
@@ -47,7 +46,6 @@ body {
     opacity: 1;
     border-width: 1px;
     background-color: #fff;
-
 }
 
 .project_title{
@@ -88,13 +86,13 @@ body {
 
 }
 
-.project_skill_description > p{
-    font-family: Inter;
+.project_skill_description > p {
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
-
+    color: #172b4d;
 }
 
 

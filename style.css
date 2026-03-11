@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 120vh;
+  
 }
 
 /* =========================
@@ -39,7 +40,9 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 4px solid red;
+    padding:10px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
 }
 
 /* =========================
@@ -99,9 +102,13 @@ body {
 }
 
 .hero__description {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
+
+  font-family: Inter;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
   color: #172b4d;
 }
 
@@ -111,11 +118,13 @@ body {
   align-items: center;
   gap: 10px;
   margin-top: 35px;
+   margin-bottom: 8px;
 }
 
 .hero__social-icon {
   width: 30px;
   height: 20px;
+ 
 }
 
 .hero__scroll {
@@ -196,6 +205,7 @@ body {
 .project-card__content {
   height: 45vh;
   width: 100%;
+  box-shadow: 0 4px 20px rgba(236, 232, 232, 0.2);
   background-color: #fff;
   border: 4px solid #ccc;
   border-radius: 8px;
@@ -219,6 +229,7 @@ body {
   justify-content: space-between;
   list-style-type: none;
   margin-top: 10px;
+  
 }
 
 .project-card__tags > li {
@@ -234,7 +245,6 @@ body {
 /* Works grid: multiple project cards */
 .works--grid {
   height: auto;
-  border: 4px solid black;
 }
 
 .works--grid .project-card {
@@ -271,6 +281,17 @@ body {
   background-color: #36b37e;
   color: #fff;
 }
+
+.btn--primary:focus{
+  cursor: pointer;
+}
+.btn--primary:hover{
+  background-color: #36B37E;
+}
+.btn--primary:active {
+  background-color: #008552;
+}
+
 
 /* =========================
    About section
@@ -325,7 +346,6 @@ body {
   margin: 0 auto;
   border-radius: 10px;
   padding: 0 10px;
-  border: 4px solid black;
 }
 
 /* =========================
@@ -345,9 +365,19 @@ body {
 .skill-category__icon {
   width: 100px;
   height: 100px;
-  background-color: green;
+  background-color:#fff;
   border-radius: 50%;
+   display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.skill-category-img{
+  width: 60px;
+  height: 60px;
+   
+}
+
 
 .skill-category__title {
   color: #172b4d;
@@ -367,7 +397,7 @@ body {
 }
 
 .skill-category__list > li {
-  width: 55px;
+  width: fit-content;
   background-color: #fff;
   padding: 5px;
   font-weight: 300;
@@ -375,4 +405,88 @@ body {
   font-size: 12px;
   text-align: center;
   margin-bottom: 5px;
+}
+
+/* =========================
+  contact form
+   ========================= */
+
+.contact_form{
+  width: 368px;
+  height:830px ;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact_form_info{
+  width: 327px;
+  height: 363px;
+ text-align: center;
+ margin-top: 20px;
+}
+
+.contact_form_title{
+  color: #172b4d;
+font-family: Inter;
+font-weight: 400;
+font-size: 40px;
+line-height: 42px;
+letter-spacing: 0%; 
+ gap: 20px;
+}
+
+.form{
+  width: 327px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  }
+
+ .form_input{
+  width:320px;
+  outline: none;
+} 
+
+input[type="text"],
+input[type="email"]{
+  height: 40px;
+  padding: 10px;
+  color: #000;
+}
+
+
+textarea{
+  height: 120px;
+  width:320px;
+  outline: none;
+}
+
+.contact_form_email {
+  width: 381px;
+  min-height: 38px;
+  opacity: 1;
+}
+
+.email_address{
+  font-family: Inter;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
+}
+
+.portfoli_end{
+  height: 5px;
+  width: 250px;
+  background-color:#172b4d;
+  margin: 0 auto;
+  border-radius: 2px;
+  
 }

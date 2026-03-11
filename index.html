@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <section class="portfolio-container">
-            <div class="hero">
-            <header class="portfolio-header-wrap">
-                  <div class="portfolio-header">
-                    <img src="./images/icons8-home-screen-50.png" class="portfolio-header__logo" alt="Home">
-                    <img src="./images/icons8-menu-50.png" class="portfolio-header__hamburger-menu" id="menu_hamburger" alt="Menu" aria-label="Open menu">
+            <div class="portfolio-header">
+                <a href="#hero"> <img src="./images/icons8-home-screen-50.png" class="portfolio-header__logo"  alt="Home"></a>
+               <img src="./images/icons8-menu-50.png" class="portfolio-header__hamburger-menu" id="menu_hamburger" alt="Menu" aria-label="Open menu">
+                   
                 </div>
+            <div class="hero" id="hero">
+                
+            <header class="portfolio-header-wrap">
+                
           
                 <!-- Hero section -->
                 
@@ -272,43 +276,5 @@
             <div class="portfoli_end"></div>
         </section>
     </div>
-    <script>
-      const menuButton = document.getElementById('menu_hamburger');
-      const menuModal = document.querySelector('.menu_modal');
-      const closeBtn = document.querySelector('.close-btn');
-      const menuLinks = document.querySelectorAll('.menu_item');
-
-      function openMenu() {
-        if (menuModal) {
-          menuModal.classList.add('is-open');
-        }
-      }
-
-      function closeMenu() {
-        if (menuModal) {
-          menuModal.classList.remove('is-open');
-        }
-      }
-
-      if (menuButton) {
-        menuButton.addEventListener('click', openMenu);
-      }
-
-      if (closeBtn) {
-        closeBtn.addEventListener('click', closeMenu);
-      }
-
-      if (menuModal) {
-        menuModal.addEventListener('click', (event) => {
-          if (event.target === menuModal) {
-            closeMenu();
-          }
-        });
-      }
-
-      menuLinks.forEach((link) => {
-        link.addEventListener('click', closeMenu);
-      });
-    </script>
   </body>
 </html>

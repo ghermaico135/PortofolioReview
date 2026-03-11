@@ -157,7 +157,6 @@ text-align: center;
   justify-content: center;
   overflow: hidden;
   padding: 0 10px;
-  border: 4px solid red;
 }
 
 .works__header {
@@ -289,9 +288,8 @@ text-align: center;
 .btn--primary:hover{
   background-color: #36B37E;
 }
-.btn--primary:active{
+.btn--primary:active {
   background-color: #008552;
-;
 }
 
 
@@ -469,12 +467,10 @@ textarea{
   outline: none;
 }
 
-.contact_form_email{
-  width: 381;
-height: 38;
-opacity: 1;
-
-
+.contact_form_email {
+  width: 381px;
+  min-height: 38px;
+  opacity: 1;
 }
 
 .email_address{

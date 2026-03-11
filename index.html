@@ -9,16 +9,15 @@
 <body>
     <div class="wrapper">
         <section class="portfolio-container">
+            <div class="hero">
             <header class="portfolio-header-wrap">
-                <div class="portfolio-header">
+                  <div class="portfolio-header">
                     <img src="./images/icons8-home-screen-50.png" class="portfolio-header__logo" alt="Home">
-                    <img src="./images/icons8-menu-50.png" class="portfolio-header__hamburger-menu" alt="Menu" aria-label="Open menu">
+                    <img src="./images/icons8-menu-50.png" class="portfolio-header__hamburger-menu" id="menu_hamburger" alt="Menu" aria-label="Open menu">
                 </div>
-            </header>
-
-            <main>
+          
                 <!-- Hero section -->
-                <div class="hero">
+                
                     <div class="hero__title-wrap">
                         <h1 class="hero__title">
                             Hey there. I'm Michael. I'm a software developer
@@ -40,10 +39,23 @@
                     <div class="hero__scroll">
                         <img class="hero__scroll-icon flip" src="./images/icons8-chevron-50.png" alt="Scroll down">
                     </div>
-                </div>
 
+                    <!-- mobile menu modal -->
+                    <section class="menu_modal" aria-labelledby="modal-area">
+                        <button type="button" class="close-btn" aria-label="Close menu">×</button>
+                        <nav class="menu">
+                            <ul class="menu_list_item">
+                                <li><a href="#portfolio" class="menu_item">Portfolio</a></li>
+                                <li><a href="#about" class="menu_item">About</a></li>
+                                <li><a href="#contact" class="menu_item">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+              </header>
+           <main>
                 <!-- Recent works section -->
-                <section class="works">
+                <section class="works" id="portfolio">
                     <div class="works__header">
                         <h2 class="works__title">My Recent Works</h2>
                     </div>
@@ -58,11 +70,41 @@
                                     <li>REACT</li>
                                     <li>JAVA</li>
                                 </ul>
-                                <button type="button" class="btn btn--primary">See Project</button>
+                                <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                             </div>
                         </article>
                     </div>
                 </section>
+
+                <!-- Project details modal (popup) -->
+                <!-- <section class="project_modal" aria-labelledby="project-title" aria-hidden="true">
+                    <div class="project_modal__backdrop"></div>
+                    <div class="project_modal__content" role="dialog" aria-modal="true">
+                        <button type="button" class="project_modal__close" aria-label="Close project details">×</button>
+                        <div class="project__header">
+                            <div class="project_img">
+                                <img src="./images/SnapshootPortfolio.png" alt="Keeping track of hundreds of components — project screenshot" loading="lazy">
+                            </div>
+                            <div class="project_title">
+                                <h2 id="project-title" class="skill_title">Keeping track of hundreds of components</h2>
+                                <ul class="skill__list">
+                                    <li>HTML/CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>REACT</li>
+                                    <li>JAVA</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="project_skill_description">
+                            <p>A tool to manage and track hundreds of UI components across the product. Built with a modern stack to keep the codebase maintainable and scalable.</p>
+                            <p>Features include filtering, search, and bulk actions so teams can stay organized and ship faster.</p>
+                        </div>
+                        <div class="skill_btn">
+                            <button type="button" class="btn btn--primary">See live</button>
+                            <button type="button" class="btn btn--primary">See source</button>
+                        </div>
+                    </div>
+                </section>  -->
 
                 <!-- Project cards grid -->
                 <section class="works works--grid">
@@ -76,7 +118,7 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </article>
                     <article class="project-card">
@@ -89,7 +131,7 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </article>
                     <article class="project-card">
@@ -102,7 +144,7 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </article>
                     <article class="project-card">
@@ -115,7 +157,7 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </article>
                     <article class="project-card">
@@ -128,7 +170,7 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </article>
                     <article class="project-card">
@@ -141,20 +183,20 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </article>
                 </section>
 
                 <!-- About section -->
-                <section class="about">
+                <section class="about" id="about">
                     <div class="about__intro">
                         <h2 class="about__title">About me</h2>
                         <p class="about__description">
                             I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded,
                             don't hesitate to contact me.
                         </p>
-                        <button type="button" class="btn btn--primary">Get my resume</button>
+                        <button type="button" class="btn btn--primary" id="project_display">Get my resume</button>
                     </div>
                     <div class="about__skills">
                         <div class="skill-category">
@@ -168,7 +210,7 @@
                                 <li>REACT</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                         <div class="skill-category">
                             <div class="skill-category__icon">
@@ -183,7 +225,7 @@
                                 <li>Springboot</li>
                                 <li>JAVA</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                         <div class="skill-category">
                             <div class="skill-category__icon">
@@ -197,13 +239,13 @@
                                 <li>Web Development</li>
                                 <li>API Design</li>
                             </ul>
-                            <button type="button" class="btn btn--primary">See Project</button>
+                            <button type="button" class="btn btn--primary" id="project_display">See Project</button>
                         </div>
                     </div>
                 </section>
 
                 <!-- contact forms -->
-                 <section class="contact_form">
+                 <section class="contact_form" id="contact">
                     <div class="contact_form_info">
                         <h2 class="contact_form_title">
                             I'm always interested in hearing about new projects, 
@@ -230,6 +272,43 @@
             <div class="portfoli_end"></div>
         </section>
     </div>
-    </header>
-</body>
+    <script>
+      const menuButton = document.getElementById('menu_hamburger');
+      const menuModal = document.querySelector('.menu_modal');
+      const closeBtn = document.querySelector('.close-btn');
+      const menuLinks = document.querySelectorAll('.menu_item');
+
+      function openMenu() {
+        if (menuModal) {
+          menuModal.classList.add('is-open');
+        }
+      }
+
+      function closeMenu() {
+        if (menuModal) {
+          menuModal.classList.remove('is-open');
+        }
+      }
+
+      if (menuButton) {
+        menuButton.addEventListener('click', openMenu);
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+      }
+
+      if (menuModal) {
+        menuModal.addEventListener('click', (event) => {
+          if (event.target === menuModal) {
+            closeMenu();
+          }
+        });
+      }
+
+      menuLinks.forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+    </script>
+  </body>
 </html>

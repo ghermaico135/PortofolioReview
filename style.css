@@ -2,6 +2,7 @@
    Global reset
    ========================= */
 
+
 *,
 *::before,
 *::after {
@@ -11,7 +12,7 @@
 }
 
 body {
-  max-width: 1200px;
+  /* max-width: 375px; */
   margin: 0 auto;
   font-family: "Inter", sans-serif;
 }
@@ -34,36 +35,114 @@ body {
    ========================= */
 
 .portfolio-container {
-  width: 375px;
-  margin: 10px;
+  width: 100%;
+  max-width: 375px;
+  margin: 10px auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-    padding:10px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  
+}
 
+
+/* =========================
+   Works section (recent works + project cards)
+
+   ========================= */
+/* .modal-wrapper {
+   width: 100%;
+   max-width: 375px;
+   min-height: 690px;
+   opacity: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   overflow: auto;
+   background-color: #ccc;
+} */
+
+/* =========================
+   Mobile menu modal
+   ========================= */
+
+.menu_modal {
+  position: absolute;
+  height: 650px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* transparent dark background */
+  display: none; 
+  justify-content: flex-end;
+  align-items:self-end;
+  z-index: 1000;
+  border-radius: 4px;
+  transition: 0.3s all ease-in-out;
+}
+
+.menu_modal.is-open {
+  display: flex;
+}
+
+.menu {
+  width: 100%;
+  /* max-width: 320px; */
+  height: 100%;
+  /* background: #fff; */
+  padding: 40px 24px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.7);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu_modal.is-open .menu {
+  transform: translateX(0); /* slide in from right */
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+
+.menu_list_item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+.menu_item {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* =========================
-   Site header (logo + menu)
+   Responsive behavior
    ========================= */
-
-.portfolio-header {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.portfolio-header__logo {
-  display: block;
-}
-
-.portfolio-header__hamburger-menu {
-  display: block;
-}
-
 /* =========================
    Hero section
    ========================= */
@@ -78,6 +157,31 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0 10px;
+  position: relative;
+  border: 4px solid red;
+  border-radius: 4px;
+}
+
+
+/* =========================
+   Site header (logo + menu)
+   ========================= */
+
+.portfolio-header {
+  height: 80px;
+  min-width: 363px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 4px solid green;
+}
+
+.portfolio-header__logo {
+  display: block;
+}
+
+.portfolio-header__hamburger-menu {
+  display: block;
 }
 
 .hero__title-wrap {
@@ -298,8 +402,8 @@ text-align: center;
    ========================= */
 
 .about {
-  height: 1522px;
-  width: 365px;
+  width: 100%;
+  max-width: 365px;
   margin: 0 auto;
 }
 
@@ -341,7 +445,8 @@ text-align: center;
 }
 
 .about__skills {
-  width: 327px;
+  width: 100%;
+  max-width: 327px;
   min-height: 1050px;
   margin: 0 auto;
   border-radius: 10px;
@@ -353,7 +458,8 @@ text-align: center;
    ========================= */
 
 .skill-category {
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,17 +518,20 @@ text-align: center;
    ========================= */
 
 .contact_form{
-  width: 368px;
+  width: 100%;
+  max-width: 368px;
   height:830px ;
-  margin-top: -200px;
+  margin-top: -100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+ 
 }
 
 .contact_form_info{
-  width: 327px;
+  width: 100%;
+  max-width: 327px;
   height: 363px;
  text-align: center;
  margin-top: 20px;
@@ -439,7 +548,8 @@ letter-spacing: 0%;
 }
 
 .form{
-  width: 327px;
+  width: 100%;
+  max-width: 327px;
   height: 330px;
   display: flex;
   flex-direction: column;
@@ -449,7 +559,8 @@ letter-spacing: 0%;
   }
 
  .form_input{
-  width:320px;
+  width: 100%;
+  max-width: 320px;
   outline: none;
 } 
 
@@ -463,12 +574,14 @@ input[type="email"]{
 
 textarea{
   height: 120px;
-  width:320px;
+  width: 100%;
+  max-width: 320px;
   outline: none;
 }
 
 .contact_form_email {
-  width: 381px;
+  width: 100%;
+  max-width: 381px;
   min-height: 38px;
   opacity: 1;
 }
@@ -490,3 +603,4 @@ text-align: center;
   border-radius: 2px;
   
 }
+

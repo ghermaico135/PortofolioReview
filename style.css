@@ -14,7 +14,7 @@
 body {
   margin: 0 auto;
   font-family: "Inter", sans-serif;
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 /* =========================
@@ -75,12 +75,22 @@ body {
 
 .portfolio-header {
   position: fixed;
-  height: 80px;
-  min-width: 363px;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.mobile-version{
+  width: 100%;
+  max-width: 375px;
+  height: 50px;
+  padding: 4px 10px;
+  display: flex;
   align-items: center;
-  z-index: 1000;
+  justify-content: space-between;
 }
 
 .portfolio-header__logo {
@@ -89,11 +99,13 @@ body {
 
 .portfolio-header__hamburger-menu {
   display: block;
+  cursor: pointer;
 }
 
-/* =========================
-   Mobile menu modal
-   ========================= */
+/* Desktop menu: hidden on mobile, shown in media query */
+.menu_desktop{
+  display: none;
+}
 
 .menu_modal {
   position: absolute;
@@ -161,6 +173,43 @@ body {
   font-weight: 400;
   color: #fff;
   text-decoration: none;
+}
+
+/* =========================
+   Desktop menu behavior
+   ========================= */
+
+@media (min-width: 768px) {
+  /* Hide hamburger on desktop, show horizontal menu */
+  .portfolio-header__hamburger-menu {
+    display: none;
+  }
+
+  .menu_modal {
+    display: none !important;
+  }
+
+  .menu_desktop {
+    display: block;
+  }
+
+  .portfolio-header {
+    justify-content: center;
+  }
+
+  .mobile-version {
+    max-width: 1024px;
+  }
+
+  .menu_desktop .menu_list_item {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .menu_desktop .menu_item {
+    font-size: 16px;
+    color: #172b4d;
+  }
 }
 
 /* hero title */
@@ -586,36 +635,74 @@ text-align: center;
 
 
 /* desktop version */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   body {
-    max-width: 1200px;
-    margin: 0 auto;
-  font-family: "Inter", sans-serif;
-
- 
+    /* min-width: 1400px; */
+    font-family: "Inter", sans-serif;
+    background-color: #fff;
 }
-
 
 .wrapper {
-  min-width: 1200px;
+  min-width: 1250px;
   border: 4px solid green;
-  background-color:#fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 0 auto; */
-  z-index: 1000;
 }
-
 
 .portfolio-container {
   min-width: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  /* border:4px solid blue; */
+} 
+
+/* Portfolio header */
+.portfolio-header {
+  /* border: 4px solid red; */
+  position:relative;
+  height: 50px;
+  min-width: 100%;
+  margin: 10px 0;
+}
+
+.home {
+  display: none;
+}
+
+.portfolio-header__hamburger-menu {
+  display: none;
+}
+
+
+.menu_desktop{
   display: flex;
-  overflow: hidden;
-  border:4px solid blue;
-  
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: 50px;
+  margin: 10px 0;
+}
+.menu {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.menu_list_item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu_item {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  z-index: 1000;
 }
 
 /* =========================
@@ -623,35 +710,19 @@ text-align: center;
    ========================= */
 
 .hero {
-  max-width: 100%;
-  background-image: url("./images/header.png");
-  background-size: cover;
-  /* background-position: center; */
-  height: 98vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 4px;
-  border: 4px solid red;
+  background-image: url("./images/Header-llustration-desktop@2x.png");
+  height: 99vh;
+  
 }
 
 
-.portfolio-header {
-  position: fixed;
-  height: 80px;
-  min-width: 363px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
 
-.portfolio-header__logo {
-  display: block;
-}
 
-.portfolio-header__hamburger-menu {
-  display: block;
-}
+/* =========================
+   Mobile menu modal
+   ========================= */
+
+
+
 
 }

@@ -11,17 +11,24 @@
     <div class="wrapper">
         <section class="portfolio-container">
             <div class="portfolio-header">
-                <a href="#hero"> <img src="./images/icons8-home-screen-50.png" class="portfolio-header__logo"  alt="Home"></a>
-               <img src="./images/icons8-menu-50.png" class="portfolio-header__hamburger-menu" id="menu_hamburger" alt="Menu" aria-label="Open menu">
-                   
+                <div class="mobile-version">
+                    <a href="#hero" class="home"> <img src="./images/icons8-home-screen-50.png" class="portfolio-header__logo"  alt="Home"></a>
+                    <img src="./images/icons8-menu-50.png" class="portfolio-header__hamburger-menu" id="menu_hamburger" alt="Menu" aria-label="Open menu">
                 </div>
+                <!-- Desktop menu -->
+                <section class="menu_desktop">
+                    <nav class="menu">
+                        <ul class="menu_list_item">
+                            <li><a href="#portfolio" class="menu_item">Portfolio</a></li>
+                            <li><a href="#about" class="menu_item">About</a></li>
+                            <li><a href="#contact" class="menu_item">Contact</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+             <!-- Hero section -->
             <div class="hero" id="hero">
-                
-            <header class="portfolio-header-wrap">
-                
-          
-                <!-- Hero section -->
-                
+                <header class="portfolio-header-wrap">
                     <div class="hero__title-wrap">
                         <h1 class="hero__title">
                             Hey there. I'm Michael. I'm a software developer
@@ -55,6 +62,8 @@
                             </ul>
                         </nav>
                     </section>
+                    
+                   
                 </div>
               </header>
            <main>
